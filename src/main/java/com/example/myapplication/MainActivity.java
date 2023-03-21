@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnDisable(View view) {
+        //select element id by findViewById() method and assign it to its relevant object
+        TextView label = findViewById(R.id.lblHeading);  //make sure this is created inside a
+        //a method like here..
+
         //disable btn on click
+        if (view.isEnabled()) {
+            //set text
+            label.setText("Why did you click the button!");
+        }
         view.setEnabled(false);
     }
 }
