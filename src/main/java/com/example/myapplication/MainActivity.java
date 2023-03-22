@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         if (view.isEnabled()) {
             //set text
             label.setText("Why did you click the button!");
+            //findViewById(R.id.lblHeading).setEnabled(false); //in one line
         }
         view.setEnabled(false);
     }
